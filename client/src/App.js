@@ -1,26 +1,33 @@
 // App.js
-import Navbar from "./components/Navbar"
+//import Navbar from "./components/Navbar"
 import './App.css';
-import { Routes, Route } from "react-router-dom";  // <== IMPORT
+import {  Routes, Route } from "react-router-dom";  // <== IMPORT
+import Navbar from './components/Navbar'
+
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
-import Login from "./pages/Login"
-import Register from "./pages/Register"
+import Login from "./pages/Login";
+import ProtectedRoute from './components/ProtectedRoute';
+import Signup from './pages/Signup';
+import Profile from './pages/Profile';
 
 
 function App() {
   return (
     <div className="App">
-    <Navbar/>
+     <Navbar />
+
 
     <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path ="/login" element ={<Login/>}/>
-        <Route path ="/register" element ={<Register/>}/>
-
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/profile' element={<Profile />} />
 
         <Route path ="*" element ={ErrorPage}/>
     </Routes>
+    <ProtectedRoute/>
+
     </div>
   );
 }

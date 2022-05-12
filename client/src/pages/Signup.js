@@ -1,33 +1,23 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { AuthContext } from '../context/auth'
 
-export default function Login() {
+export default function Signup() {
 
+	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [errorMessage, setErrorMessage] = useState(undefined);
 
 	const navigate = useNavigate()
 
-	const { storeToken, verifyStoredToken } = useContext(AuthContext)
-
 	const handleSubmit = e => {
 		e.preventDefault()
-		const requestBody = { email, password }
-		axios.post('/api/auth/login', requestBody)
+		const requestBody = { email, password, name }
+		axios.post('/api/auth/signup', requestBody)
 			.then(response => {
-				// redirect to projects
-				console.log('i have a token mothafukkas')
-				const token = response.data.authToken
-				// store the token
-				storeToken(token)
-				verifyStoredToken()
-					.then(() => {
-						// redirect to projects
-						navigate('/profile')
-					})
+				// redirect to login
+				navigate('/login')
 			})
 			.catch(err => {
 				const errorDescription = err.response.data.message
@@ -36,11 +26,13 @@ export default function Login() {
 	}
 
 	const handleEmail = e => setEmail(e.target.value)
+	const handleName = e => setName(e.target.value)
 	const handlePassword = e => setPassword(e.target.value)
+
 
 	return (
 		<>
-			<h1>Login</h1>
+			<h1>Signup</h1>
 			<form onSubmit={handleSubmit}>
 
 				<label htmlFor="email">Email: </label>
@@ -49,13 +41,16 @@ export default function Login() {
 				<label htmlFor="password">Password: </label>
 				<input type="password" value={password} onChange={handlePassword} />
 
-				<button type="submit">Log In</button>
+				<label htmlFor="name">Name: </label>
+				<input type="text" value={name} onChange={handleName} />
+
+				<button type="submit">Sign Up</button>
 			</form>
 
 			{errorMessage && <h5>{errorMessage}</h5>}
 
-			<h3>Don't have an account?</h3>
-			<Link to='/signup'>Signup</Link>
+			<h3>Already have an account?</h3>
+			<Link to='/login'>Login</Link>
 		</>
 	)
 }
