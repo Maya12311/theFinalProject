@@ -5,7 +5,7 @@ const { isAuthenticated } = require('../middleware/jwt')
 const User = require('../models/User')
 
 router.post('/signup', (req, res, next) => {
-	const { email, password, name } = req.body
+	const { email, password, name, street, streetNumber } = req.body
 	// check if email or name or password are empty
 	if (email === '' || password === '' || name === '') {
 		res.status(400).json({ message: 'Provide email, password and name' })
@@ -27,7 +27,7 @@ router.post('/signup', (req, res, next) => {
 			const salt = bcrypt.genSaltSync();
 			const hashedPassword = bcrypt.hashSync(password, salt)
 			// create the new user
-			return User.create({ email, password: hashedPassword, name })
+			return User.create({ email, password: hashedPassword, name, street, streetNumber })
 				.then(createdUser => {
 					const { email, name, _id } = createdUser
 					const user = { email, name, _id }

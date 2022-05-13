@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-const API_URL = "http://localhost:5005";
 
 
 export default function Signup() {
@@ -10,13 +9,15 @@ export default function Signup() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [errorMessage, setErrorMessage] = useState(undefined);
+	const [street, setStreet] = useState('');
+	const [streetNumber, setStreetNumber] = useState(0);
 
 
 	const navigate = useNavigate()
 
 	const handleSubmit = e => {
 		e.preventDefault()
-		const requestBody = { email, password, name }
+		const requestBody = { email, password, name, street, streetNumber }
 		axios.post('/api/auth/signup', requestBody)
 			.then(response => {
 				// redirect to login
@@ -31,6 +32,10 @@ export default function Signup() {
 	const handleEmail = e => setEmail(e.target.value)
 	const handleName = e => setName(e.target.value)
 	const handlePassword = e => setPassword(e.target.value)
+	const handleStreet = e => setStreet(e.target.value)
+	const handleStreetNumber = e => setStreetNumber(e.target.value)
+
+
 
 
 	return (
@@ -46,6 +51,12 @@ export default function Signup() {
 
 				<label htmlFor="name">Name: </label>
 				<input type="text" value={name} onChange={handleName} />
+
+				<label htmlFor="street">Street: </label>
+				<input type="text" value={street} onChange={handleStreet} />
+
+				<label htmlFor="streetNumber">Number: </label>
+				<input type="number" value={streetNumber} onChange={handleStreetNumber} />
 
 				<button type="submit">Sign Up</button>
 			</form>
