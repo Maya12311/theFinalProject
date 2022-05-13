@@ -29,8 +29,8 @@ router.post('/signup', (req, res, next) => {
 			// create the new user
 			return User.create({ email, password: hashedPassword, name, street, streetNumber })
 				.then(createdUser => {
-					const { email, name, _id } = createdUser
-					const user = { email, name, _id }
+					const { email, name, _id , street, streetNumber} = createdUser
+					const user = { email, name, _id , street, streetNumber}
 					res.status(201).json({ user: user })
 				})
 				.catch(err => {
@@ -54,8 +54,8 @@ router.post('/login', (req, res, next) => {
 			}
 			const passwordCorrect = bcrypt.compareSync(password, foundUser.password)
 			if (passwordCorrect) {
-				const { _id, email, name } = foundUser
-				const payload = { _id, email, name }
+				const { _id, email, name , street, streetNumber} = foundUser
+				const payload = { _id, email, name, street, streetNumber }
 				// create the json web token
 				const authToken = jwt.sign(
 					payload,

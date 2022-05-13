@@ -12,7 +12,6 @@ import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 
 
-//const data = fetch('https://data.mongodb-api.com/app/data-bukxp/endpoint/data/beta');
 
 
 function App() {

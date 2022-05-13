@@ -15,6 +15,8 @@ function Profile(props){
   const { id } = useParams()
 
 	const [userdata, setUserdata] = useState(null)
+  console.log(`does it work`,userdata)
+  console.log(user)
 
 	useEffect(() => {
 		axios.get(`/api/profile/${id}`)
@@ -33,6 +35,8 @@ function Profile(props){
 
 
        <p>Hello {user?.name}</p>
+       <p>{user.street}</p> <p>{user.streetNumber}</p>
+
 
         <img src={profilePic} alt="pictureOfanonymous"/>
         </div>

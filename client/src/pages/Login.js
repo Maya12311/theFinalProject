@@ -28,7 +28,7 @@ export default function Login() {
 				verifyStoredToken()
 					.then(() => {
 						// redirect to projects
-						navigate('/profile/${id}')
+						navigate(`/profile/${user?._id}`)
 					})
 			})
 			.catch(err => {
@@ -41,7 +41,9 @@ export default function Login() {
 	const handlePassword = e => setPassword(e.target.value)
 
 	return (
+
 		<>
+		<div>
 			<h1>Login</h1>
 			<form onSubmit={handleSubmit}>
 
@@ -53,6 +55,8 @@ export default function Login() {
 
 				<button type="submit">Log In</button>
 			</form>
+
+			</div>
 
 			{errorMessage && <h5>{errorMessage}</h5>}
 
