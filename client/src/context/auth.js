@@ -1,5 +1,4 @@
-   
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const AuthContext = React.createContext()
@@ -46,9 +45,9 @@ function AuthProviderWrapper(props) {
 
 	}
 
-	//useEffect(() => {
-	//	verifyStoredToken()
-	//}, [])
+	useEffect(() => {
+		verifyStoredToken()
+	}, [])
 
 	return (
 		<AuthContext.Provider value={{ isLoggedIn, user, isLoading, storeToken, verifyStoredToken, logoutUser }}>

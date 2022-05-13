@@ -2,7 +2,9 @@ import profilePic from '../Style/images/ProfilePic.jpeg';
 import '../Style/Stylesheets/Profile.css';
 
 
-function Profile(){
+function Profile(props){
+
+  console.log(props)
     return(
         <div>
         <div>
