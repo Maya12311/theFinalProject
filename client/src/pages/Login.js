@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { AuthContext } from '../context/auth'
+import '../Style/Stylesheets/Login.css';
+
 
 
 export default function Login() {
@@ -43,25 +45,43 @@ export default function Login() {
 	return (
 
 		<>
-		<div>
-			<h1>Login</h1>
-			<form onSubmit={handleSubmit}>
-
-				<label htmlFor="email">Email: </label>
+		<div className='wrapper'>
+		<div className='title'>
+		Login form
+		</div>
+			<form  onSubmit={handleSubmit}>
+			<div className='field'>
+			
 				<input type="text" value={email} onChange={handleEmail} />
+				<label htmlFor="email">Email: </label>
+				</div>
 
-				<label htmlFor="password">Password: </label>
+				<div className="field">
 				<input type="password" value={password} onChange={handlePassword} />
+				<label htmlFor="password">Password: </label>
+				</div>
 
+				<div className='content'>
+				<div className='checkbox'>
+
+				<input type="checkbox" id="remember-me"/>
+                <label htmlFor="remember-me">Remember me</label>
+				</div>
+				</div>
+				<div>
 				<button type="submit">Log In</button>
+				</div>
+				<div className='signup-link'>
+				<h3>Don't have an account?</h3>
+				<Link to='/signup'>Signup</Link>		
+				</div>
 			</form>
 
 			</div>
 
 			{errorMessage && <h5>{errorMessage}</h5>}
 
-			<h3>Don't have an account?</h3>
-			<Link to='/signup'>Signup</Link>
+		
 		</>
 	)
 }
