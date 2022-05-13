@@ -1,13 +1,38 @@
 import profilePic from '../Style/images/ProfilePic.jpeg';
 import '../Style/Stylesheets/Profile.css';
+import axios from 'axios'
+import React, { useState, useEffect, useContext } from 'react'
+import { useParams } from 'react-router-dom'
+import { AuthContext } from '../context/auth'
+
+
 
 
 function Profile(props){
+  const { isLoggedIn, logoutUser, user } = useContext(AuthContext)
 
-  console.log(props)
+
+  const { id } = useParams()
+
+	const [userdata, setUserdata] = useState(null)
+
+	useEffect(() => {
+		axios.get(`/api/profile/${id}`)
+			.then(response => {
+				console.log(`SHOW, SHOW, SHOW MEEEE`,response)
+				setUserdata(response.data)
+			})
+			.catch(err => console.log(err))
+	}, [])
+
+
+
     return(
         <div>
         <div>
+
+
+       <p>Hello {user?.name}</p>
 
         <img src={profilePic} alt="pictureOfanonymous"/>
         </div>

@@ -3,15 +3,17 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { AuthContext } from '../context/auth'
 
+
 export default function Login() {
 
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [errorMessage, setErrorMessage] = useState(undefined);
 
+
 	const navigate = useNavigate()
 
-	const { storeToken, verifyStoredToken } = useContext(AuthContext)
+	const { storeToken, verifyStoredToken, user } = useContext(AuthContext)
 
 	const handleSubmit = e => {
 		e.preventDefault()
@@ -26,7 +28,7 @@ export default function Login() {
 				verifyStoredToken()
 					.then(() => {
 						// redirect to projects
-						navigate('/profile')
+						navigate('/profile/${id}')
 					})
 			})
 			.catch(err => {

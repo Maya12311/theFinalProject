@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../context/auth'
-import '../Style/Stylesheets/Navbar.css';
+import '../Style/Navbar.css';
 
 
 export default function Navbar() {
 
-	const { isLoggedIn, logoutUser } = useContext(AuthContext)
+	const { user, isLoggedIn, logoutUser } = useContext(AuthContext)
 
 	return (
 		<nav>
@@ -16,8 +16,8 @@ export default function Navbar() {
 			{isLoggedIn ?
 				(
 					<>
-						<Link to='/projects'>
-							<button>Projects</button>
+						<Link to={`/profile/${user._id}`}>
+							<button>Profile</button>
 						</Link>
 						<button onClick={logoutUser}>Log out</button>
 					</>
