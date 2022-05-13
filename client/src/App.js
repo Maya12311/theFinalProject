@@ -10,36 +10,13 @@ import Login from "./pages/Login";
 import ProtectedRoute from './components/ProtectedRoute';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
-import { useState, useEffect } from 'react';
-import axios from "axios";                       // <== IMPORT axios
 
 
 //const data = fetch('https://data.mongodb-api.com/app/data-bukxp/endpoint/data/beta');
 
 
 function App() {
- // data
-  //.then (data => data.json()) 
-  //.then (data => {
-    // console.log(`this is the data from app`, data)
-  //})
-  //.catch((error) => {
-    // console.error(error)
-  //})
-
-  //const [user, setUser] = useState(data);
-  const [user, setUsers] = useState([]);
  
-  useEffect(() => {                                        // <== ADD THE EFFECT
-    axios
-      .get("https://data.mongodb-api.com/app/data-bukxp/endpoint/data/beta")
-      .then((response) => {
-        console.log('response.data', response.data);
-        setUsers(response.data)
-      });
-    
-  }, [] ); 
-
 
 
 

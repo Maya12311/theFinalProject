@@ -28,14 +28,8 @@ const { isAuthenticated } = require('./middleware/jwt')
 
 const auth = require("./routes/auth");
 app.use("/api/auth", auth);
-//const home = require("../theFinalProject/client/src/pages/Home");          //  <== IMPORT
-//app.use("/Home", homeRouter);  
 
-//const login = require("../theFinalProject/client/src/pages/Login");          //  <== IMPORT
-//app.use("/Login", loginRouter); 
 
-//const register = require("../theFinalProject/client/src/pages/Register");          //  <== IMPORT
-//app.use("/Register", registerRouter); 
 
 
 
