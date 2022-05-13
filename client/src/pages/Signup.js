@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import '../Style/Stylesheets/Login.css';
+
 
 
 export default function Signup() {
@@ -40,31 +42,65 @@ export default function Signup() {
 
 	return (
 		<>
-			<h1>Signup</h1>
-			<form onSubmit={handleSubmit}>
+			
+			<div className='wrapper'>
+			<div className='title'>
+				Login form
+				</div>
+				<form onSubmit={handleSubmit}>
 
-				<label htmlFor="email">Email: </label>
+				<div className='field'>
 				<input type="text" value={email} onChange={handleEmail} />
 
-				<label htmlFor="password">Password: </label>
+				<label htmlFor="email">Email: </label>
+				</div>
+
+				<div className='field'>
 				<input type="password" value={password} onChange={handlePassword} />
 
-				<label htmlFor="name">Name: </label>
+				<label htmlFor="password">Password: </label>
+				</div>
+
+				<div className='field'>
 				<input type="text" value={name} onChange={handleName} />
 
-				<label htmlFor="street">Street: </label>
+				<label htmlFor="name">Name: </label>
+				</div>
+
+				<div className='field'>
 				<input type="text" value={street} onChange={handleStreet} />
 
-				<label htmlFor="streetNumber">Number: </label>
+				<label htmlFor="street">Street: </label>
+				</div>
+
+				<div className='field'>
 				<input type="number" value={streetNumber} onChange={handleStreetNumber} />
 
-				<button type="submit">Sign Up</button>
+				<label htmlFor="streetNumber">Number: </label>
+				</div>
+
+				<div class="content">
+               <div class="checkbox">
+                  <input type="checkbox" id="remember-me"/>
+                  <label htmlFor="remember-me">Remember me</label>
+               </div>
+				</div>
+				<div className='field'>
+				<button className="signupButton" type="submit">Sign Up</button>
+				</div>
+
+				<p>Already have an account?</p>
+			<Link to='/login'>Login</Link>
+				
+
 			</form>
+			</div>
 
 			{errorMessage && <h5>{errorMessage}</h5>}
 
-			<h3>Already have an account?</h3>
-			<Link to='/login'>Login</Link>
+			
+
+
 		</>
 	)
 }
