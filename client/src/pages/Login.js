@@ -69,7 +69,7 @@ export default function Login() {
 				</div>
 				</div>
 				<div>
-				<button type="submit">Log In</button>
+				<button className="navi" type="submit">Log In</button>
 				</div>
 				<div className='signup-link'>
 				<h3>Don't have an account?</h3>

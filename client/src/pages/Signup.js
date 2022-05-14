@@ -49,6 +49,14 @@ export default function Signup() {
 				</div>
 				<form onSubmit={handleSubmit}>
 
+
+				<div className='field'>
+				<input type="text" value={name} onChange={handleName} />
+
+				<label htmlFor="name">Name: </label>
+				</div>
+
+
 				<div className='field'>
 				<input type="text" value={email} onChange={handleEmail} />
 
@@ -61,11 +69,6 @@ export default function Signup() {
 				<label htmlFor="password">Password: </label>
 				</div>
 
-				<div className='field'>
-				<input type="text" value={name} onChange={handleName} />
-
-				<label htmlFor="name">Name: </label>
-				</div>
 
 				<div className='field'>
 				<input type="text" value={street} onChange={handleStreet} />
@@ -86,7 +89,7 @@ export default function Signup() {
                </div>
 				</div>
 				<div className='field'>
-				<button className="signupButton" type="submit">Sign Up</button>
+				<button className="signupButton navi" type="submit">Sign Up</button>
 				</div>
 
 				<p>Already have an account?</p>

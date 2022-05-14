@@ -1,26 +1,29 @@
-button{
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.navi{
   
     text-align: justify;
 	margin:20px;
 	text-decoration:none;
 	font-family:Arial;
 	font-size:16px;
-	border:3px solid #404040;
-	color:#404040;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-	background-color: #F8AFA6;
-	padding:3px 7px;
+	border:3px solid #404040;          
     border-color: bisque;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);;
     opacity: 0.8;
     border-radius: 15%;
     width: 100px;
-    
-    
+	font-family: 'Indie Flower', cursive;
+	padding-left: 23px;
 }
-button:hover{
-	background-color: coral;
+.navi:hover{
+	background-color: F8AFA6;
     opacity: 3;
+}
+
+nav{
+	position: relative;
+	left: 400px;
 }
 
 

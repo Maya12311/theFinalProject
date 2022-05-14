@@ -18,7 +18,7 @@
         width: 100%;
         background-image: linear-gradient(45deg,#ff0000 20%,  #b30000 20%, #ffbfbf 20%, wheat 10%);
         opacity: 60%;
-        background-image: url(../images/Festival.jpeg);
+        background-image: url(../images/wallPic.webp);
         
         
         
@@ -26,8 +26,9 @@
       }
       
       .button {
-        width: 140px;
-        height: 45px;
+        width: 100px;
+        height: 30px;
+        
         font-family: 'Roboto', sans-serif;
         font-size: 11px;
         text-transform: uppercase;
@@ -52,21 +53,19 @@
 
     
       .house{
-          width: 1000px;
-          height: 400px;
-          border-style: dotted;
+          width: 80em;
+          height: 100%;
+          border-style: solid;
           border-width: 3px;
           border-color: #FFE5CC;
-          opacity: 70%;
+          background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-color: #000;
+margin-right: 200px;
       }
 
-      .backImage{
-        background-color: #FFE5CC;
-        border-color: darkgreen;
-        border-width: 3px;
-        border-style: solid;
-        height: 5rem;
-      }
+    
    
 
       .buttonWraper{
@@ -76,3 +75,24 @@
        margin-left: 70%;
       }
     
+
+
+
+      .container {
+        position: relative;
+      }
+      
+      /* Bottom right text */
+      .text-block {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        height: 100px;
+        width: 300px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        opacity: 70%;
+
+      }

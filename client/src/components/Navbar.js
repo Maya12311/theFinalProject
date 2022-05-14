@@ -10,24 +10,25 @@ export default function Navbar() {
 
 	return (
 		<nav>
+		
 			<Link to='/'>
-				<button>Home</button>
+				<button className='navi'>Home</button>
 			</Link>
 			{isLoggedIn ?
 				(
 					<>
 						<Link to={`/profile/${user._id}`}>
-							<button>Profile</button>
+							<button className='navi'>Profile</button>
 						</Link>
-						<button onClick={logoutUser}>Log out</button>
+						<button className = 'navi' onClick={logoutUser}>Log out</button>
 					</>
 				) : (
 					<>
 						<Link to='/signup'>
-							<button>Signup</button>
+							<button className='navi'>Signup</button>
 						</Link>
 						<Link to='/login'>
-							<button>Login</button>
+							<button className='navi'>Login</button>
 						</Link>
 					</>
 				)

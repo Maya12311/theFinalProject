@@ -21,7 +21,7 @@ html,body{
   width: 380px;
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  box-shadow: 0px 15px 30px rgba(0,0,0,0.1);
 }
 .wrapper .title{
   font-size: 35px;
@@ -120,15 +120,8 @@ form .signup-link{
   margin-top: 20px;
   text-align: center;
 }
-form .pass-link a,
-form .signup-link a{
-  color: #4158d0;
-  text-decoration: none;
-}
-form .pass-link a:hover,
-form .signup-link a:hover{
-  text-decoration: underline;
-}
+
+
 
 .signupButton{
 margin: auto;

@@ -2,10 +2,9 @@ import profilePic from '../Style/images/ProfilePic.jpeg';
 import '../Style/Stylesheets/Profile.css';
 import axios from 'axios'
 import React, { useState, useEffect, useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { AuthContext } from '../context/auth'
-
-
+import OverviewNeighbour from '../components/ShowOne'
 
 
 function Profile(props){
@@ -36,13 +35,14 @@ function Profile(props){
 
        <p>Hello {user?.name}</p>
        <p>{user.street}</p> <p>{user.streetNumber}</p>
-
-
+       <Link to={`/neighbears`}><button>
+       Neighbears</button></Link>
+       <Link to={`/overview`}><button>
+       Overview</button></Link>
+        <OverviewNeighbour/>
         <img src={profilePic} alt="pictureOfanonymous"/>
         </div>
-        <div>
-          <p></p>  
-        </div>
+       
         </div>
     )
 }
