@@ -1,9 +1,12 @@
 import ShowOne from "../components/ShowOne"
 
+
 function OverviewNeighbear() {
+  
+    
     return(
         <div>
-            overview
+            Neighbear
             <ShowOne/>
         </div>
     )

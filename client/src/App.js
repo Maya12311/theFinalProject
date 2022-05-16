@@ -7,11 +7,11 @@ import Navbar from './components/Navbar'
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
 import Login from "./pages/Login";
-import ProtectedRoute from './components/ProtectedRoute';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import OverviewNeighbear from './pages/OverviewNeighbear'
-
+import Event from './pages/Event';
+import AllPage from './pages/AllPage';
 
 function App() {
  
@@ -28,8 +28,11 @@ function App() {
         <Route path ="/login" element ={<Login/>}/>
         <Route path='/signup' element={<Signup />} />
         <Route path='/profile/:id' element={<Profile />} />
-        <Route path='/neighbears' element={<OverviewNeighbear />} />
-        <Route path='/overview' element={<OverviewNeighbear/>}/>
+        <Route path='/neighbears/:id' element={<OverviewNeighbear />} />
+        <Route path='/event' element={<Event/>}/>
+        <Route path='/overview' element={<AllPage/>}/>
+
+
         <Route path ="*" element ={ErrorPage}/>
     </Routes>
     {/*<ProtectedRoute/>*/}

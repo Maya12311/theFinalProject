@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+.container {
+    background-image: radial-gradient(#f4a900 50%, #fb9062 , #7e292c, #ee5d6c);
+    box-shadow: 10px 10px 10px 10px black;;
+    opacity: 0.3;
+
+}
+
+.container:hover{
+    opacity: 0.8;
+
+}
+
+.custom-select{
+    color: black;
+    background-color: #f4a900;
+    border-radius: 9%;
+    border: 15px solid #F67280;
+    border: groove;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px black;
+    font-family: 'Indie Flower', cursive;
+
+    
+}
+
+.body{
+  
+    background-image: url('../images/jannes-glas-0NaQQsLWLkA-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 1000px;
+  width: 1600px;
+}
+
+
+textarea{
+    color:  #C06C84;
+    width: 800px;
+
+}
+
+h1{
+    font-family: 'Indie Flower', cursive;
+
+}

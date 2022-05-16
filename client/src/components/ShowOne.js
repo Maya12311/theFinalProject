@@ -3,7 +3,7 @@
 
 function ShowOne(){
     return(
-        <div>neighbears</div>
+        <div></div>
     )
 }
 
