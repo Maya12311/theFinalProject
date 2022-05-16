@@ -30,11 +30,14 @@ app.use("/api", allRoutes);
 const auth = require("./routes/auth");
 app.use("/api/auth", auth);
 
-const profile = require("./routes/profile");
-app.use("/api/profile", isAuthenticated, profile);
+const event = require("./routes/event");
+app.use("/api/event", event);
 
+const neighbears = require("./routes/neighbears");
+app.use("/api/neighbears", neighbears); 
 
-
+const overview = require("./routes/overview");
+app.use("/api/overview", overview); 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
