@@ -12,21 +12,20 @@ function Profile(props){
 
 
   const { id } = useParams()
-  console.log(`the id is this one`, id)
+ // console.log(`the id is this one`, id)
 
 	const [userdata, setUserdata] = useState(null)
 
   useEffect(() => {                                        // <== ADD THE EFFECT
 		axios.get(`api/profile/${id}`)
 			.then(response => {
-				console.log(`SHOW, SHOW, SHOW MEEEE`,response)
 				setUserdata(response.data)
 			})
 			.catch(err => console.log(err))
     })
 
 
-    console.log(userdata)
+    //console.log(userdata)
 
    
   
