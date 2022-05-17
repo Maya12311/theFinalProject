@@ -8,13 +8,13 @@ import ShowEvents from '../components/ShowEvents'
 function AllPage(){
 
     const [event, setEvent] = useState([])
-    console.log('event state is', event)
+    //console.log('event state is', event)
 
     useEffect(() => {                                        // <== ADD THE EFFECT
 		axios.get(`/api/overview`)  
 			.then(response => {
 				setEvent(response.data.events)
-                console.log('i m the state in axios', response.data.events)
+               // console.log('i m the state in axios', response.data.events)
 			})
 			.catch(err => console.log(err))
         },[])

@@ -1,35 +1,13 @@
 import profilePic from '../Style/images/ProfilePic.jpeg';
 //import '../Style/Stylesheets/Profile.css';
-import axios from 'axios'
 import React, { useState, useEffect, useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AuthContext } from '../context/auth'
-import neighbears from './neighbears'
 
 
 function Profile(props){
   const {  user } = useContext(AuthContext)
-
-
-  const { id } = useParams()
- // console.log(`the id is this one`, id)
-
-	const [userdata, setUserdata] = useState(null)
-
-  useEffect(() => {                                        // <== ADD THE EFFECT
-		axios.get(`api/profile/${id}`)
-			.then(response => {
-				setUserdata(response.data)
-			})
-			.catch(err => console.log(err))
-    })
-
-
-    //console.log(userdata)
-
-   
   
-
     return(
         <div>
 

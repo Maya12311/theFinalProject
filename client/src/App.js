@@ -9,7 +9,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Login from "./pages/Login";
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
-import OverviewNeighbear from './pages/neighbears'
+import Neighbears from './pages/Neighbears'
 import Event from './pages/Event';
 import AllPage from './pages/AllPage';
 
@@ -28,7 +28,7 @@ function App() {
         <Route path ="/login" element ={<Login/>}/>
         <Route path='/signup' element={<Signup />} />
         <Route path='/profile/:id' element={<Profile />} />
-        <Route path='/neighbears/:id' element={<OverviewNeighbear />} />
+        <Route path='/neighbears/:id' element={<Neighbears />} />
         <Route path='/event' element={<Event/>}/>
         <Route path='/overview' element={<AllPage/>}/>
 
