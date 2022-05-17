@@ -12,6 +12,8 @@ import Profile from './pages/Profile';
 import Neighbears from './pages/Neighbears'
 import Event from './pages/Event';
 import AllPage from './pages/AllPage';
+import AddMember from "./pages/AddMember"
+
 
 function App() {
  
@@ -31,6 +33,7 @@ function App() {
         <Route path='/neighbears/:id' element={<Neighbears />} />
         <Route path='/event' element={<Event/>}/>
         <Route path='/overview' element={<AllPage/>}/>
+        <Route path='/addmember/:id' element={<AddMember/>}/>
 
 
         <Route path ="*" element ={ErrorPage}/>

@@ -28,6 +28,9 @@ function Profile(props){
       <button>create an event</button>
       </Link>
 
+
+      <Link to={`/addMember/${user._id}`}><button>
+       Add Flatmates, partner or Family member</button></Link>
          
         <img src={profilePic} alt="pictureOfanonymous"/>
      
