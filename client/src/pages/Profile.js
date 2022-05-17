@@ -1,5 +1,5 @@
 import profilePic from '../Style/images/ProfilePic.jpeg';
-//import '../Style/Stylesheets/Profile.css';
+import '../Style/Stylesheets/Profile.css';
 import React, { useState, useEffect, useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AuthContext } from '../context/auth'
@@ -7,7 +7,7 @@ import { AuthContext } from '../context/auth'
 
 function Profile(props){
   const {  user } = useContext(AuthContext)
-  
+
     return(
         <div>
 
