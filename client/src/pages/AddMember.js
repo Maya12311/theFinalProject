@@ -6,7 +6,7 @@ import axios from 'axios';
 function AddMember(){
 
     let {id} = useParams()
-    console.log(id)
+    //console.log(id)
 
     const [flatmate, setFlatmate] = useState('')
     const [relationship, setRelationship] = useState('')
@@ -16,7 +16,7 @@ function AddMember(){
 	const handleSubmit = e => {
 		e.preventDefault()
 		const requestBody = {  flatmate, relationship, age }
-        console.log(requestBody)
+        //console.log(requestBody)
 		axios.post(`/api/addmember/${id}`, requestBody)
         .then((response) => {
           //  console.log('response', response)
@@ -39,7 +39,7 @@ function AddMember(){
 <h1>Add everyone who lives with you 🐕‍🦺 🐈 🦨 👨‍👩‍👦‍👦</h1>
 <form onSubmit={handleSubmit}>
 
-<div className="container">
+<div className="containerAddMember">
   
     
     <label className="custom-select">Who lives with you:</label>
@@ -68,8 +68,10 @@ function AddMember(){
     <textarea
         type="text"
         name="relationship"
+        rows={5}
+        cols={80}
        
-        placeholder="What is the relationship state of you"
+        placeholder="If you like, you can tell your Housemates something about the relationship you have to each other or ans information you like to share :)"
         
         value={relationship}
         onChange={handleRelationship}

@@ -40,7 +40,7 @@ function Event (){
 
 <form onSubmit={handleSubmit}>
 
-<div className="container">
+<div className="containerEvent">
     <select
     className="custom-select"
     placeholder="select the type"

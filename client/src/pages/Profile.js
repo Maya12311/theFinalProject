@@ -10,16 +10,16 @@ function Profile(props){
   const {  user } = useContext(AuthContext)
 
   let {id} = useParams()
-  console.log(`I'm the id in the profile frontend`, {id})
+  //console.log(`I'm the id in the profile frontend`, {id})
 
   const [addOneMember, setAddOneMember] = useState([]);
-console.log(`Da`, addOneMember)
+//console.log(`Da`, addOneMember)
 
   useEffect(() => {                                       
     axios
       .get(`/api/profile/${id}`)
       .then((response) => {
-        console.log('frontend here for neighbears', response.data);
+      //  console.log('frontend here for neighbears', response.data);
         setAddOneMember(response.data)
       });
     
@@ -28,39 +28,48 @@ console.log(`Da`, addOneMember)
 
 
     return(
-        <div>
+      <body className='background'>
+        <div className='card'>
 
         <div>
 
         
-        <div>
-        <img src={profilePic} alt="pictureOfanonymous"/>
+        <div className='backgroundImage'>
+        <img className="imgProfile" src={profilePic} alt="pictureOfanonymous"/>
         </div>
+                 
+                  <h1 key={user?._id} className="title">
+                    Hello {user?.name}
+                  </h1>
+                 
+       
+                  <h2 key={user?._id} >
+                  Your current address is: 
+                      <p>{user?.street} {user?.streetNumber} </p> 
+                  </h2>
 
-       <p>Hello {user?.name}</p>
-       <p>{user.street}</p> <p>{user.streetNumber}</p>
-       <Link to={`/neighbears/${user._id}`}><button>
+                <Link to={`/neighbears/${user._id}`}><button className='profileButton'>
        Neighbears</button></Link>
-       <Link to={`/overview`}><button>
+       <Link to={`/overview`}><button className='profileButton'>
        Overview</button></Link>
       
        <Link to={`/event`}> 
        
-      <button>create an event</button>
+      <button className='profileButton'>create an event</button>
       </Link>
 
 
-      <Link to={`/addMember/${user._id}`}><button>
+      <Link to={`/addmember/${user._id}`}><button className='profileButton'>
        Add Flatmates, partner or Family member</button></Link>
        
         </div>
        
           <div className='addMember'>
-
+              <h3>People/Animal I live with:</h3>
           {addOneMember.map((member) => {
-         console.log('in the map', member)
+       //  console.log('in the map', member)
          return (
-           <div>
+           <div className='card'>
            <ShowAddMember infoOneMember={member}
            />
 
@@ -74,6 +83,7 @@ console.log(`Da`, addOneMember)
 
 
         </div>
+        </body>
         
     )
 }

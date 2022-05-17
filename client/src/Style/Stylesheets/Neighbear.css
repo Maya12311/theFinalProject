@@ -1,8 +1,32 @@
-.container{
+
+
+
+.imageNeighbears{
+    border: 3px solid orange;
+}
+
+.containerNei{
+    width: 100%;
     display: flex;
-    margin-top: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-shadow: 5px;
+    shape-outside: 5px;
+    background-image: linear-gradient(to right , #4DA0B0, #D39D38);
+
+}
+
+.nameNei p{
+    padding-right: 500px;
+    color: white;
+}
+
+.imageNei{
+    border-radius: 50%;
 }
 
 
-.container p {
-}
+
+   

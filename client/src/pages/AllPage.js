@@ -1,14 +1,16 @@
 
-//import ShowEvents from "../components/ShowEvents"
+import '../Style/Stylesheets/Event.css';
+
 import axios from 'axios'
 import React, { useState, useEffect} from 'react'
 import ShowEvents from '../components/ShowEvents'
 
 
 function AllPage(){
-
     const [event, setEvent] = useState([])
     //console.log('event state is', event)
+
+
 
     useEffect(() => {                                        // <== ADD THE EFFECT
 		axios.get(`/api/overview`)  
@@ -33,6 +35,9 @@ function AllPage(){
        
      <h1>   The events are listed here:</h1>
 
+
+
+
      {
      event.map((event) => {
          return (
@@ -44,7 +49,6 @@ function AllPage(){
      })}
 
 
-    
 
 
         </div>
