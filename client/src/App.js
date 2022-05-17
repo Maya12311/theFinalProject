@@ -9,7 +9,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Login from "./pages/Login";
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
-import OverviewNeighbear from './pages/OverviewNeighbear'
+import OverviewNeighbear from './pages/neighbears'
 import Event from './pages/Event';
 import AllPage from './pages/AllPage';
 

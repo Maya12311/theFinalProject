@@ -1,4 +1,3 @@
-import ShowOne from "../components/ShowOne"
 
 
 function OverviewNeighbear() {
@@ -6,8 +5,7 @@ function OverviewNeighbear() {
     
     return(
         <div>
-            Neighbear
-            <ShowOne/>
+        Hello Neighbear
         </div>
     )
 }

@@ -8,11 +8,12 @@ function Event (){
 
     const [theme, setTheme] = useState('')
     const [eventInfo, setEventInfo] = useState('')
+    const [date, setDate] = useState("")
 
 
 	const handleSubmit = e => {
 		e.preventDefault()
-		const requestBody = { eventType, theme, eventInfo }
+		const requestBody = { eventType, theme, eventInfo, date }
 		axios.post('/api/event', requestBody)
         .then((response) => {
           //  console.log('response', response)
@@ -20,12 +21,15 @@ function Event (){
             setEventType("");
             setTheme("");
             setEventInfo("")
+            setDate("")
           });
       };
      
 
 	const handleTheme = e => setTheme(e.target.value)
 	const handleDescribe = e => setEventInfo(e.target.value)
+    const handleDate = e => setDate(e.target.value)
+
 
    
 
@@ -46,6 +50,7 @@ function Event (){
         setEventType(selectedEvent)
     }}
     >
+        <option >Select an Option</option>
         <option value="animals">Animals</option>
         <option value="moving">Moving</option>
         <option value="food">Food</option>
@@ -63,6 +68,16 @@ function Event (){
         placeholder="theme"
         value={theme}
         onChange={handleTheme}
+        />
+
+<label className="custom-select">Date:</label>
+    <input 
+        className="custom-select"
+        type="text"
+        name="date"
+        placeholder=" date"
+        value={date}
+        onChange={handleDate}
         />
 
         <div> 

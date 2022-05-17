@@ -4,7 +4,7 @@ import axios from 'axios'
 import React, { useState, useEffect, useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AuthContext } from '../context/auth'
-import OverviewNeighbour from '../components/ShowOne'
+import neighbears from './neighbears'
 
 
 function Profile(props){
@@ -40,7 +40,7 @@ function Profile(props){
 
        <p>Hello {user?.name}</p>
        <p>{user.street}</p> <p>{user.streetNumber}</p>
-       <Link to={`/neighbears${user._id}`}><button>
+       <Link to={`/neighbears/${user._id}`}><button>
        Neighbears</button></Link>
        <Link to={`/overview`}><button>
        Overview</button></Link>
@@ -50,7 +50,6 @@ function Profile(props){
       <button>create an event</button>
       </Link>
 
-        <OverviewNeighbour />
          
         <img src={profilePic} alt="pictureOfanonymous"/>
      

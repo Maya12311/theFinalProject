@@ -2,6 +2,7 @@
 //import ShowEvents from "../components/ShowEvents"
 import axios from 'axios'
 import React, { useState, useEffect} from 'react'
+import ShowEvents from '../components/ShowEvents'
 
 
 function AllPage(){
@@ -34,7 +35,12 @@ function AllPage(){
 
      {
      event.map((event) => {
-         return <h3>{event.theme}</h3>
+         return (
+             <>             
+             <ShowEvents eventData ={event}/>
+             </>
+
+         )
      })}
 
 
