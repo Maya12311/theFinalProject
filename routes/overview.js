@@ -7,8 +7,8 @@ router.get('/', (req, res, next) => {
 	Event.find()
 		.then(events => {
             
-            console.log( `ARE this are all the events`, events )
-			res.status(200).json( {'events': events })
+      //      console.log( `ARE this are all the events`, events )
+			res.status(200).json({'events': events})
 
 		})
 	// if the token is valid we can access it on : req.payload

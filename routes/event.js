@@ -6,12 +6,12 @@ const Event = require('../models/Event')
 
 
 router.post('/', (req, res, next) => {
-	const { eventType, theme, eventInfo } = req.body
+	const { eventType, theme, eventInfo, date } = req.body
 
-    Event.create({ eventType, theme, eventInfo })
+    Event.create({ eventType, theme, eventInfo, date})
 				.then(newEvent => {
-					const {eventType, theme, eventInfo} = newEvent
-                    console.log(`the new Event has been created`, newEvent)
+					const {eventType, theme, eventInfo, date} = newEvent
+                 //   console.log(`the new Event has been created`, newEvent)
 					res.status(201).json({ newEvent})
 				})
 				.catch(err => {
