@@ -1,14 +1,25 @@
 const router = require("express").Router();
-const Event = require('../models/Event')
+const { populate } = require("../models/Event");
+const Event = require('../models/Event');
+const User = require("../models/User");
 
 
 
-router.get('/', (req, res, next) => {
+router.get('/:id', (req, res, next) => {
+	const userId = req.params.id
+	const userStreet = req.payload.street
 	Event.find()
+	.populate('owner')
 		.then(events => {
-            
-      //      console.log( `ARE this are all the events`, events )
-			res.status(200).json({'events': events})
+			console.log(`this is the payload`, req.payload)
+           const filter =  events.filter(event => {
+			//   console.log(event.owner.street, userStreet)
+			 return  event.owner.street === userStreet
+			   
+		   })
+         console.log( `ARE this are all the filterd events`, filter )
+		 
+			res.status(200).json({'events': filter})
 
 		})
 	// if the token is valid we can access it on : req.payload
@@ -26,3 +37,5 @@ router.get('/', (req, res, next) => {
 
 
 module.exports = router
+
+

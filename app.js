@@ -37,8 +37,13 @@ const neighbears = require("./routes/neighbears");
 app.use("/api/neighbears", neighbears); 
 
 const overview = require("./routes/overview");
-app.use("/api/overview", overview); 
+app.use("/api/overview",isAuthenticated,  overview); 
 
+const addmember = require("./routes/addmember");
+app.use("/api/addmember", addmember); 
+
+const profile = require("./routes/profile");
+app.use("/api/profile", profile); 
 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
