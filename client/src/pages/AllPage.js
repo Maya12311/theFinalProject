@@ -1,5 +1,5 @@
 
-//import '../Style/Stylesheets/Event.css';
+import '../Style/Stylesheets/Event.css';
 
 import axios from 'axios'
 import React, { useState, useEffect} from 'react'

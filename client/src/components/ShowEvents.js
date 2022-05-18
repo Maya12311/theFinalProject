@@ -2,7 +2,7 @@ import '../Style/Stylesheets/Scrollbar.css';
 
 
 function ShowEvents(props){
-console.log('propis here', props.eventData)
+//console.log('propis here', props.eventData)
 
 //<p>{props.eventData.owner.name}</p>
 

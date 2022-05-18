@@ -16,7 +16,7 @@ function AddMember(){
 	const handleSubmit = e => {
 		e.preventDefault()
 		const requestBody = {  flatmate, relationship, age }
-        //console.log(requestBody)
+        console.log(requestBody)
 		axios.post(`/api/addmember/${id}`, requestBody)
         .then((response) => {
           //  console.log('response', response)
@@ -26,6 +26,9 @@ function AddMember(){
             setAge(undefined)
           });
       };
+
+
+      
      
 
 	const handleFlatmate = e => setFlatmate(e.target.value)
@@ -78,11 +81,16 @@ function AddMember(){
     />
     </div>
 
+
     <button className="signupButton navi" type="submit">Submit</button>
+
+
 
     </div>
 
 </form>
+
+
 
 
         </div>

@@ -1,5 +1,5 @@
 import profilePic from '../Style/images/ProfilePic.jpeg';
-//import '../Style/Stylesheets/Profile.css';
+import '../Style/Stylesheets/Profile.css';
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { AuthContext } from '../context/auth';
@@ -13,6 +13,11 @@ function Profile(props){
   //console.log(`I'm the id in the profile frontend`, {id})
 
   const [addOneMember, setAddOneMember] = useState([]);
+  const [imageUrl, setImageUrl] = useState("");
+  const handleSubmit= ()=>{
+
+  }
+
 //console.log(`Da`, addOneMember)
 
   useEffect(() => {                                       
@@ -25,10 +30,31 @@ function Profile(props){
     
   }, [] ); 
 
+  const handleFileUpload = e =>{
 
+      // console.log("The file to be uploaded is: ", e.target.files[0]);
+ 
+     const uploadData = new FormData();
+ 
+      // imageUrl => this name has to be the same as in the model since we pass
+      // req.body to .create() method when creating a new movie in '/api/movies' POST route
+     uploadData.append("imageUrl", e.target.files[0]);
+   
+     axios.post("/api/profile/upload")
+        .uploadImage(uploadData)
+        .then(response => {
+           console.log("response is: ", response);
+           //response carries "secure_url" which we can use to update the state
+        setImageUrl(response.secure_url);
+        // axios.put um user upzudaten
+        // user._id benutzen
+        })
+        .catch(err => console.log("Error while uploading the file: ", err));
+  }
 
     return(
-      <body className='background'>
+
+      <div className='background'>
         <div className='card'>
 
         <div>
@@ -36,6 +62,13 @@ function Profile(props){
         
         <div className='backgroundImage'>
         <img className="imgProfile" src={profilePic} alt="pictureOfanonymous"/>
+        <form onSubmit={handleSubmit}>
+        <input type="file" />
+        <button type="submit">Save new movie</button>
+
+
+
+        </form>
         </div>
                  
                   <h1 key={user?._id} className="title">
@@ -48,18 +81,18 @@ function Profile(props){
                       <p>{user?.street} {user?.streetNumber} </p> 
                   </h2>
 
-                <Link to={`/neighbears/${user._id}`}><button className='profileButton'>
+                <Link to={`/neighbears/${user?._id}`}><button className='profileButton'>
        Neighbears</button></Link>
-       <Link to={`/overview/${user._id}`}><button className='profileButton'>
+       <Link to={`/overview/${user?._id}`}><button className='profileButton'>
        Overview</button></Link>
       
-       <Link to={`/event/${user._id}`}> 
+       <Link to={`/event/${user?._id}`}> 
        
       <button className='profileButton'>create an event</button>
       </Link>
 
 
-      <Link to={`/addmember/${user._id}`}><button className='profileButton'>
+      <Link to={`/addmember/${user?._id}`}><button className='profileButton'>
        Add Flatmates, partner or Family member</button></Link>
        
         </div>
@@ -83,7 +116,7 @@ function Profile(props){
 
 
         </div>
-        </body>
+        </div>
         
     )
 }

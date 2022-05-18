@@ -1,5 +1,5 @@
 import {useState} from "react";
-//import '../Style/Stylesheets/Event.css';
+import '../Style/Stylesheets/Event.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
