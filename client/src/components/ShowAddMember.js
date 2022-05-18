@@ -2,7 +2,7 @@ import profilePic from '../Style/images/ProfilePic.jpeg';
 
 
 function ShowAddMember(props){
-console.log('we are the props', props)
+//console.log('we are the props', props)
 
     return(
         <div className="cardShowMembers">

@@ -1,4 +1,4 @@
-import '../Style/Stylesheets/Home.css';
+//import '../Style/Stylesheets/Home.css';
 import logo from '../Style/images/lachende Menschen.jpeg';
 //import { Link } from "react-router-dom"; 
   

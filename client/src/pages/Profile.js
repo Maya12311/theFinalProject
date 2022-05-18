@@ -1,5 +1,5 @@
 import profilePic from '../Style/images/ProfilePic.jpeg';
-import '../Style/Stylesheets/Profile.css';
+//import '../Style/Stylesheets/Profile.css';
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { AuthContext } from '../context/auth';
@@ -50,10 +50,10 @@ function Profile(props){
 
                 <Link to={`/neighbears/${user._id}`}><button className='profileButton'>
        Neighbears</button></Link>
-       <Link to={`/overview`}><button className='profileButton'>
+       <Link to={`/overview/${user._id}`}><button className='profileButton'>
        Overview</button></Link>
       
-       <Link to={`/event`}> 
+       <Link to={`/event/${user._id}`}> 
        
       <button className='profileButton'>create an event</button>
       </Link>

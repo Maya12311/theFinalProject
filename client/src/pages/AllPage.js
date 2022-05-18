@@ -1,19 +1,25 @@
 
-import '../Style/Stylesheets/Event.css';
+//import '../Style/Stylesheets/Event.css';
 
 import axios from 'axios'
 import React, { useState, useEffect} from 'react'
 import ShowEvents from '../components/ShowEvents'
+import { useParams } from 'react-router-dom';
 
 
 function AllPage(){
     const [event, setEvent] = useState([])
+    const storedToken = localStorage.getItem('authToken')
+
     //console.log('event state is', event)
 
+    let {id} = useParams()
 
 
     useEffect(() => {                                        // <== ADD THE EFFECT
-		axios.get(`/api/overview`)  
+		axios.get(`/api/overview/${id}`, { headers: { Authorization: `Bearer ${storedToken}` } }
+
+        )  
 			.then(response => {
 				setEvent(response.data.events)
                // console.log('i m the state in axios', response.data.events)

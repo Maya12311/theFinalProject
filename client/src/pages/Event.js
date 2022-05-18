@@ -1,6 +1,8 @@
 import {useState} from "react";
 //import '../Style/Stylesheets/Event.css';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
+
 
 
 function Event (){
@@ -11,10 +13,13 @@ function Event (){
     const [date, setDate] = useState("")
 
 
+    let {id} = useParams()
+
+
 	const handleSubmit = e => {
 		e.preventDefault()
 		const requestBody = { eventType, theme, eventInfo, date }
-		axios.post('/api/event', requestBody)
+		axios.post(`/api/event/${id}`, requestBody)
         .then((response) => {
           //  console.log('response', response)
             // Reset the state
@@ -51,13 +56,13 @@ function Event (){
     }}
     >
         <option >Select an Option</option>
-        <option value="animals">Animals</option>
-        <option value="moving">Moving</option>
-        <option value="food">Food</option>
-        <option value="sport">Sport</option>
-        <option value="help">Help</option>
-        <option value="post">Post</option>
-        <option value="eventOrparty">Event/Party</option>
+        <option value="Animals/Plants 🐵">Animals</option>
+        <option value="Moving">Moving</option>
+        <option value="Food">Food</option>
+        <option value="Sport">Sport</option>
+        <option value="Help">Help</option>
+        <option value="Post">Post</option>
+        <option value="EventOrparty">Event/Party</option>
     </select>
     
     <label className="custom-select">Theme:</label>
@@ -73,7 +78,7 @@ function Event (){
 <label className="custom-select">Date:</label>
     <input 
         className="custom-select"
-        type="text"
+        type="date"
         name="date"
         placeholder=" date"
         value={date}

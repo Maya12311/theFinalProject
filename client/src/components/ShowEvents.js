@@ -2,8 +2,9 @@ import '../Style/Stylesheets/Scrollbar.css';
 
 
 function ShowEvents(props){
-//console.log(props.eventData)
+console.log('propis here', props.eventData)
 
+//<p>{props.eventData.owner.name}</p>
 
 
     return(
@@ -13,6 +14,9 @@ function ShowEvents(props){
         <div key={props.eventData._id}>
           <h3 > {props.eventData.eventType}</h3>
           <h3>{props.eventData.theme}</h3>
+          <p>{props.eventData.date}</p>
+
+
           </div>
           
             <div className='floatRight'>

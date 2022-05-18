@@ -3,8 +3,8 @@ import React, { useState, useEffect, useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AuthContext } from '../context/auth'
 import profilePic from '../Style/images/ProfilePic.jpeg';
-import '../Style/Stylesheets/Neighbear.css';
-import '../Style/Stylesheets/Profile.css';
+//import '../Style/Stylesheets/Neighbear.css';
+//import '../Style/Stylesheets/Profile.css';
 
 import ShowAddMember from "../components/ShowAddMember"
 
@@ -26,7 +26,7 @@ function OverviewNeighbear() {
       .get(`/api/neighbears/${id}`)
       .then((response) => {
         //console.log('I wanna know what the response is about', response)
-        setFlatmates(response.data.flatmates)
+        //setFlatmates(response.data.flatmates)
        // console.log('I wanna know what the response flatmate is about', response.data.flatmates)
 
         //console.log('frontend here for neighbears', response.data.sameHouse);
@@ -39,7 +39,7 @@ function OverviewNeighbear() {
         <div>
        
        <div>
-        <h1>{user?.name}, this are your Housemates from </h1>
+        <h1>{user?.name}, these are your Housemates from </h1>
         <h2>{user?.street} {user?.streetNumber}</h2>
         </div>
 
