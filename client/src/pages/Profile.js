@@ -44,7 +44,7 @@ function Profile(props){
            console.log("response is: ", response);
            //response carries "secure_url" which we can use to update the state
         setImageUrl(response.data.secure_url);
-         axios.put(`/api/profile/upload/${id}`, {imageUrl})
+         axios.put(`/api/profile/upload/${id}`, {imageUrl: response.data.secure_url})
           .then(response => console.log(response))
           .catch(err => console.log("Error while uploading the file: ", err));
 
@@ -52,6 +52,20 @@ function Profile(props){
         // user._id benutzen
         })
   }
+
+
+   /* <h3>People/Animal I live with:</h3>
+{addOneMember.map((member) => {
+ console.log('in the map', member)
+return (
+ <div className='card'>
+ <ShowAddMember infoOneMember={member}
+ />
+
+ </div>
+)
+
+})} */
 
     return(
       <div className='backgroundColor'>
@@ -116,15 +130,4 @@ export default Profile
 
 
 
-// {/* <h3>People/Animal I live with:</h3>
-// {addOneMember.map((member) => {
-// //  console.log('in the map', member)
-// return (
-//  <div className='card'>
-//  <ShowAddMember infoOneMember={member}
-//  />
-
-//  </div>
-// )
-
-// })} */}
+//

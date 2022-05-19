@@ -35,7 +35,6 @@ router.put('/upload/:id',  (req, res, next) => {
   }
  
   User.findByIdAndUpdate(id, req.body, { new: true })
-  console.log(req.body)
     .then((updatedProject) => res.json(updatedProject))
     .catch(error => res.json(error));
 });
