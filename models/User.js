@@ -10,7 +10,9 @@ const userSchema = new Schema(
     password: String,
     email: String,
     street: String,
-    streetNumber: Number
+    streetNumber: Number,
+    imageUrl: String
+
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

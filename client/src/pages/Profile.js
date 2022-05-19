@@ -97,18 +97,7 @@ function Profile(props){
         </div>
        
           <div className='addMember'>
-              <h3>People/Animal I live with:</h3>
-          {addOneMember.map((member) => {
-       //  console.log('in the map', member)
-         return (
-           <div className='card'>
-           <ShowAddMember infoOneMember={member}
-           />
-
-           </div>
-         )
-         
-         })}
+      
 
           </div>
 
@@ -123,3 +112,19 @@ function Profile(props){
 
 
 export default Profile
+
+
+
+
+// {/* <h3>People/Animal I live with:</h3>
+// {addOneMember.map((member) => {
+// //  console.log('in the map', member)
+// return (
+//  <div className='card'>
+//  <ShowAddMember infoOneMember={member}
+//  />
+
+//  </div>
+// )
+
+// })} */}

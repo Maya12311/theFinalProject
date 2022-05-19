@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const AddMember = require("../models/AddMember");
-
+const User =require("../models/User");
 
 router.post('/:id', (req, res, next) => {
     const userId = req.params.id
@@ -26,6 +26,8 @@ router.post('/:id', (req, res, next) => {
 
 
 });
+
+
 
 
 router.get("/", (req, res, next) => {
