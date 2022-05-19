@@ -30,7 +30,7 @@ const selectedFood = () => {
 
  const selectedSport = () => {
   if(props.eventData.eventType === "Sport ⚽️🏈🥎"){
-   return  <div className='containerSport scroll floatRight'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3><p>{props.eventData.owner.name}</p> <p>from {props.eventData.eventInfo}</p><p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
+   return  <div className='containerSport scroll floatRight'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3><p>{props.eventData.owner.name}</p> <p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
        
    }
   }
@@ -45,7 +45,7 @@ const selectedFood = () => {
 
  const selectedAnimals = () => {
   if(props.eventData.eventType === 'Animals/Plants 🐵'){
-   return  <div className='scroll containerAnimals'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3><p>{props.eventData.owner.name}</p> <p>from {props.eventData.eventInfo}</p><p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
+   return  <div className='scroll containerAnimals'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3><p>{props.eventData.owner.name}</p> <p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
        
    }
   }
@@ -64,7 +64,7 @@ const selectedPost = () => {
 
 const selectedHelp = () => {
   if(props.eventData.eventType === 'Help 🚨'){
-   return  <div className='scroll containerHelp'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3> <p>{props.eventData.owner.name}</p><p>from {props.eventData.eventInfo}</p><p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
+   return  <div className='scroll containerHelp'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3> <p>{props.eventData.owner.name}</p><p>from {props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
        
    }
   }

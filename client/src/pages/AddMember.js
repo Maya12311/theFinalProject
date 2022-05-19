@@ -22,7 +22,7 @@ function AddMember(){
         console.log(requestBody)
 		axios.post(`/api/addmember/${id}`, requestBody)
         .then((response) => {
-          //  console.log('response', response)
+            console.log('response', response)
             // Reset the state
             setRelationship("");
             setFlatmate("");

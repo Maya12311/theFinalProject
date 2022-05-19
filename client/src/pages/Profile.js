@@ -23,7 +23,8 @@ function Profile(props){
       .get(`/api/profile/${id}`)
       .then((response) => {
       //  console.log('frontend here for neighbears', response.data);
-        setAddOneMember(response.data)
+        setAddOneMember(response.data.member)
+        setImageUrl(response.data.user.imageUrl)
       });
     
   }, [] ); 
@@ -54,18 +55,7 @@ function Profile(props){
   }
 
 
-   /* <h3>People/Animal I live with:</h3>
-{addOneMember.map((member) => {
- console.log('in the map', member)
-return (
- <div className='card'>
- <ShowAddMember infoOneMember={member}
- />
-
- </div>
-)
-
-})} */
+ 
 
     return(
       <div className='backgroundColor'>
@@ -84,12 +74,12 @@ return (
 
         </div>
                  
-                  <h1 key={user?._id} className="title">
+                  <h1 className="title">
                     Hello {user?.name} ☺️
                   </h1>
                  
        
-                  <h2 key={user?._id} >
+                  <h2 >
                   Your current address is: 
                       <p>🏠 {user?.street} {user?.streetNumber} </p> 
                   </h2>
@@ -115,6 +105,18 @@ return (
 
           </div>
 
+          <h3>People/Animal I live with:</h3>
+{addOneMember.map((member) => {
+ console.log('in the map', member)
+return (
+ <div className='card'>
+ <ShowAddMember infoOneMember={member}
+ />
+
+ </div>
+)
+
+})}
 
 
         </div>
