@@ -1,5 +1,5 @@
 import {useState} from "react";
-import '../Style/Stylesheets/Event.css';
+//import '../Style/Stylesheets/Event.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
@@ -57,25 +57,25 @@ function Event (){
     >
         <option >Select an Option</option>
         <option value="Animals/Plants 🐵">Animals</option>
-        <option value="Moving">Moving</option>
-        <option value="Food">Food</option>
-        <option value="Sport">Sport</option>
-        <option value="Help">Help</option>
-        <option value="Post">Post</option>
-        <option value="EventOrparty">Event/Party</option>
+        <option value="Moving 😱">Moving</option>
+        <option value="Food/Drinks 🥨🍸🥦">Food</option>
+        <option value="Sport ⚽️🏈🥎">Sport</option>
+        <option value="Help 🚨">Help</option>
+        <option value="Post 📦✉️">Post</option>
+        <option value="Party 💄">Event/Party</option>
     </select>
     
-    <label className="custom-select">Theme:</label>
+    <label ></label>
     <input 
-        className="custom-select"
+        className="titelClass"
         type="text"
         name="theme"
-        placeholder="theme"
+        placeholder="Chose a titel"
         value={theme}
         onChange={handleTheme}
         />
 
-<label className="custom-select">Date:</label>
+<label ></label>
     <input 
         className="custom-select"
         type="date"

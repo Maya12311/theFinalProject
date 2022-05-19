@@ -3,8 +3,8 @@ import React, { useState, useEffect, useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AuthContext } from '../context/auth'
 import profilePic from '../Style/images/ProfilePic.jpeg';
-import '../Style/Stylesheets/Neighbear.css';
-import '../Style/Stylesheets/Profile.css';
+//import '../Style/Stylesheets/Neighbear.css';
+//import '../Style/Stylesheets/Profile.css';
 
 import ShowAddMember from "../components/ShowAddMember"
 
@@ -40,7 +40,7 @@ function OverviewNeighbear() {
        
        <div>
         <h1>{user?.name}, these are your Housemates from </h1>
-        <h2>{user?.street} {user?.streetNumber}</h2>
+        <h1>🏡{user?.street} {user?.streetNumber}</h1>
         </div>
 
 
@@ -49,8 +49,9 @@ function OverviewNeighbear() {
        console.log('in the map', neighbear)
          return (
 
-             <>  
-             <body className='bodyNei'>
+             <div className = "backgroundForNei">
+             <div >
+             <div className='bodyNei'>
              <hr></hr>
             
              <div className='containerNei container'>
@@ -80,8 +81,10 @@ function OverviewNeighbear() {
 }
              </div>
              </div>
-             </body>
-             </>
+             </div>
+             </div>
+             </div>
+      
 
 
              

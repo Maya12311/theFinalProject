@@ -1,3 +1,6 @@
+//import '../Style/Stylesheets/AddMember.css';
+import sidePic from '../Style/images/nice-seamless-pattern-vector-21114503.jpeg';
+
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -38,16 +41,17 @@ function AddMember(){
 
 
     return(
+        <div className='backgroundColor'>
         <div>
-<h1>Add everyone who lives with you 🐕‍🦺 🐈 🦨 👨‍👩‍👦‍👦</h1>
+<h1>Do you have to say something about yourself? </h1>
 <form onSubmit={handleSubmit}>
 
 <div className="containerAddMember">
   
     
-    <label className="custom-select">Who lives with you:</label>
+    <label ></label>
     <input 
-        className="custom-select"
+        className="label1"
         type="text"
         name="flatmate"
         placeholder="tell your housemates who you live with"
@@ -55,12 +59,12 @@ function AddMember(){
         onChange={handleFlatmate}
         />
 
-<label className="custom-select">Age:</label>
+<label ></label>
     <input 
-        className="custom-select"
+        className="label2"
         type="text"
         name="age"
-        placeholder=" age"
+        placeholder="What's your age again?"
         value={age}
         onChange={handleAge}
         />
@@ -71,6 +75,8 @@ function AddMember(){
     <textarea
         type="text"
         name="relationship"
+        className="textfeld1"
+
         rows={5}
         cols={80}
        
@@ -82,7 +88,7 @@ function AddMember(){
     </div>
 
 
-    <button className="signupButton navi" type="submit">Submit</button>
+    <button className="signupButton navi buttonForm" type="submit">Submit</button>
 
 
 
@@ -91,8 +97,11 @@ function AddMember(){
 </form>
 
 
+<div className='plants'>
+    <img src={sidePic}/>
+</div>
 
-
+        </div>
         </div>
     )
 }

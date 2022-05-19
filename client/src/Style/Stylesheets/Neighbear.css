@@ -3,6 +3,8 @@
 
 .imageNeighbears{
     border: 3px solid orange;
+    border-radius: 50%;
+    border-style: dotted;
 }
 
 .containerNei{
@@ -27,6 +29,9 @@
     border-radius: 50%;
 }
 
+.backgroundForNei{
+    background-color: black;
+}
 
 
    

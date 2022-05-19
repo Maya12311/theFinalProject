@@ -6,7 +6,7 @@
     width: 200px;
     height: 200px;
     margin-top: 50px;
-    border: 5px solid black;
+    border: 5px dotted black;
     border-color: rosybrown;
     border-radius: 50%;
 }
@@ -57,5 +57,11 @@
 
   h3{
     font-family: 'Indie Flower', cursive;
+
+  }
+
+  .background{
+
+  background-color: aliceblue;
 
   }

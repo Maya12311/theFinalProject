@@ -5,14 +5,13 @@
 .scroll {
   
   
-    background-color: #2a363b;
     color: white;
     overflow-y:scroll;
     overflow-x: scroll;
     bottom: 10px;
     width: 100%;
     height: 80px;
-    border: 3px solid #E84A5F;
+    border: 3px solid black;
     max-height: 100px;
    
 }
@@ -40,10 +39,69 @@ float: right;
 }
 
 .otherContainer{
+   
+    overflow-y:scroll;
+    overflow-x: scroll;
+    
+    max-height: 100px;
+    width: 1200px;
+   
 
 }
 
 .h1{
     font-family: 'Indie Flower', cursive;
+
+}
+
+.containerFood{   
+    background-color: blue;
+    width: 600px;
+    height: 200px;
+}
+
+.containerSport{
+    background-color: orange;
+    width: 600px;
+    height: 200px;
+
+}
+
+.containerPost{
+    background-color: #99B898;
+    width: 600px;
+    height: 200px;
+  
+
+}
+
+.containerAnimals{
+    background-color: plum;
+    color: white;
+    width: 600px;
+    height: 200px;
+
+}
+
+.containerHelp{
+    background-color: purple;
+    color: white;
+    width: 600px;
+    height: 200px;
+}
+
+.containerMoving{
+    background-color: yellow;
+    color: white;
+    width: 600px;
+    height: 200px;
+
+}
+
+.containerParty{
+    background-color: darkgreen;
+    color: white;
+    width: 600px;
+    height: 200px;
 
 }

@@ -22,7 +22,18 @@
     box-sizing: border-box;
     box-shadow: 10px 10px 10px black;
     font-family: 'Indie Flower', cursive;
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
 
+    
+}
+
+.titelClass{
+    background-color: #f4a900;
+    height: 60px;
+    width: 200px;
+    font-size: 25px;
     
 }
 
@@ -41,6 +52,7 @@
 textarea{
     color:  #C06C84;
     width: 800px;
+    font-size: 25px;
 
 }
 

@@ -1,5 +1,5 @@
 import profilePic from '../Style/images/ProfilePic.jpeg';
-import '../Style/Stylesheets/Profile.css';
+//import '../Style/Stylesheets/Profile.css';
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { AuthContext } from '../context/auth';
@@ -14,9 +14,7 @@ function Profile(props){
 
   const [addOneMember, setAddOneMember] = useState([]);
   const [imageUrl, setImageUrl] = useState("");
-  const handleSubmit= ()=>{
-
-  }
+  
 
 //console.log(`Da`, addOneMember)
 
@@ -31,6 +29,7 @@ function Profile(props){
   }, [] ); 
 
   const handleFileUpload = e =>{
+    console.log(e.target.files[0])
 
       // console.log("The file to be uploaded is: ", e.target.files[0]);
  
@@ -46,6 +45,10 @@ function Profile(props){
            console.log("response is: ", response);
            //response carries "secure_url" which we can use to update the state
         setImageUrl(response.secure_url);
+         axios.put(`/api/profile/upload/${id}`,{
+         imageUrl
+       
+         })
         // axios.put um user upzudaten
         // user._id benutzen
         })
@@ -53,6 +56,7 @@ function Profile(props){
   }
 
     return(
+      <div className='backgroundColor'>
 
       <div className='background'>
         <div className='card'>
@@ -62,23 +66,20 @@ function Profile(props){
         
         <div className='backgroundImage'>
         <img className="imgProfile" src={profilePic} alt="pictureOfanonymous"/>
-        <form onSubmit={handleSubmit}>
-        <input type="file" />
-        <button type="submit">Save new movie</button>
+        <input type="file" onChange={handleFileUpload}/>
 
 
 
-        </form>
         </div>
                  
                   <h1 key={user?._id} className="title">
-                    Hello {user?.name}
+                    Hello {user?.name} ☺️
                   </h1>
                  
        
                   <h2 key={user?._id} >
                   Your current address is: 
-                      <p>{user?.street} {user?.streetNumber} </p> 
+                      <p>🏠 {user?.street} {user?.streetNumber} </p> 
                   </h2>
 
                 <Link to={`/neighbears/${user?._id}`}><button className='profileButton'>
@@ -115,6 +116,7 @@ function Profile(props){
 
 
 
+        </div>
         </div>
         </div>
         
