@@ -13,10 +13,10 @@ function Profile(props){
   //console.log(`I'm the id in the profile frontend`, {id})
 
   const [addOneMember, setAddOneMember] = useState([]);
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState(profilePic);
   
 
-//console.log(`Da`, addOneMember)
+     //console.log(`Da`, addOneMember)
 
   useEffect(() => {                                       
     axios
@@ -39,20 +39,18 @@ function Profile(props){
       // req.body to .create() method when creating a new movie in '/api/movies' POST route
      uploadData.append("imageUrl", e.target.files[0]);
    
-     axios.post("/api/profile/upload")
-        .uploadImage(uploadData)
+     axios.post("/api/profile/upload", uploadData)
         .then(response => {
            console.log("response is: ", response);
            //response carries "secure_url" which we can use to update the state
-        setImageUrl(response.secure_url);
-         axios.put(`/api/profile/upload/${id}`,{
-         imageUrl
-       
-         })
+        setImageUrl(response.data.secure_url);
+         axios.put(`/api/profile/upload/${id}`, {imageUrl})
+          .then(response => console.log(response))
+          .catch(err => console.log("Error while uploading the file: ", err));
+
         // axios.put um user upzudaten
         // user._id benutzen
         })
-        .catch(err => console.log("Error while uploading the file: ", err));
   }
 
     return(
@@ -65,7 +63,7 @@ function Profile(props){
 
         
         <div className='backgroundImage'>
-        <img className="imgProfile" src={profilePic} alt="pictureOfanonymous"/>
+        <img className="imgProfile" src={imageUrl} alt="pictureOfanonymous"/>
         <input type="file" onChange={handleFileUpload}/>
 
 
