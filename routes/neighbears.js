@@ -14,10 +14,13 @@ router.get('/:id', (req, res, next) => {
             User.find({street: street, streetNumber: streetNumber,  _id: { $ne: userId }})
             .then(neighbears => {
                // console.log(neighbears)
+			   AddMember.find()
+				.then(infoAboutPerson => {
 				
 
 				
-			res.status(200).json({ sameHouse: neighbears} )
+			res.status(200).json({ sameHouse: neighbears, infoAboutPerson} )
+		})
 		})
 		})
 	// if the token is valid we can access it on : req.payload
