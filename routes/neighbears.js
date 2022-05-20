@@ -8,10 +8,10 @@ router.get('/:id', (req, res, next) => {
    // console.log('this is the id for neighbears', userId)
 	User.findById(userId)
 		.then(houseDetails => {
-            const{street, streetNumber} = houseDetails
+            const{street, streetNumber, imageUrl} = houseDetails
            // console.log(houseDetails)
 
-            User.find({street: street, streetNumber: streetNumber, _id: { $ne: userId }})
+            User.find({street: street, streetNumber: streetNumber,  _id: { $ne: userId }})
             .then(neighbears => {
                // console.log(neighbears)
 				
