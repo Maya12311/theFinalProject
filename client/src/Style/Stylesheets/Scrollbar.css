@@ -10,7 +10,7 @@
     overflow-x: scroll;
     bottom: 10px;
     width: 100%;
-    height: 80px;
+    height: 200px;
     border: 3px solid black;
     max-height: 100px;
    
@@ -25,7 +25,6 @@
 }
 
 .scroll p{
-    color:  #FECEAB;
     font-size: 22px;
     
 }
@@ -43,7 +42,6 @@ float: right;
     overflow-y:scroll;
     overflow-x: scroll;
     
-    max-height: 100px;
     width: 1200px;
    
 
@@ -56,21 +54,33 @@ float: right;
 
 .containerFood{   
     background-color: blue;
-    width: 600px;
-    height: 200px;
+    margin: 25px;
+    width: 250px;
+    min-height:250px;
+    max-height:250px;
+    padding-top:35px;
+    height: 100px;
 }
 
 .containerSport{
     background-color: orange;
-    width: 600px;
-    height: 200px;
+    margin: 25px;
+    width: 250px;
+    min-height:250px;
+    max-height:250px;
+    padding-top:35px;
+    height: 100px;
 
 }
 
 .containerPost{
     background-color: #99B898;
-    width: 600px;
-    height: 200px;
+    margin: 25px;
+    width: 250px;
+    min-height:250px;
+    max-height:250px;
+    padding-top:35px;
+    height: 100px;
   
 
 }
@@ -78,30 +88,47 @@ float: right;
 .containerAnimals{
     background-color: plum;
     color: white;
-    width: 600px;
-    height: 200px;
+    margin: 25px;
+    width: 250px;
+    min-height:250px;
+    max-height:250px;
+    padding-top:35px;
+    height: 100px;
 
 }
 
 .containerHelp{
-    background-color: purple;
+    background-color: pink;
     color: white;
-    width: 600px;
-    height: 200px;
+    margin: 25px;
+    width: 250px;
+    min-height:250px;
+    max-height:250px;
+    padding-top:35px;
+    height: 100px;
+
 }
 
-.containerMoving{
-    background-color: yellow;
-    color: white;
-    width: 600px;
-    height: 200px;
+.containerPLants{
+    margin: 25px;
+    width: 250px;
+    min-height:250px;
+    max-height:250px;
+    padding-top:35px;
+    height: 100px;
+    background: #ffff88; /* Old browsers */
+    color: green
 
 }
 
 .containerParty{
     background-color: darkgreen;
     color: white;
-    width: 600px;
-    height: 200px;
+    margin: 25px;
+    width: 250px;
+    min-height:250px;
+    max-height:250px;
+    padding-top:35px;
+    height: 100px;
 
 }

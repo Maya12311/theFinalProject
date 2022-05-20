@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-//import '../Style/Stylesheets/Login.css';
+import '../Style/Stylesheets/Login.css';
 
 
 
@@ -45,7 +45,7 @@ export default function Signup() {
 			
 			<div className='wrapper'>
 			<div className='title'>
-				Login form
+				Sign Up
 				</div>
 				<form onSubmit={handleSubmit}>
 

@@ -1,5 +1,5 @@
 import profilePic from '../Style/images/ProfilePic.jpeg';
-//import '../Style/Stylesheets/Profile.css';
+import '../Style/Stylesheets/Profile.css';
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { AuthContext } from '../context/auth';
@@ -75,28 +75,28 @@ function Profile(props){
         </div>
                  
                   <h1 className="title">
-                    Hello {user?.name} ☺️
+                    Hello {user?.name},
                   </h1>
                  
        
                   <h2 >
-                  Your current address is: 
-                      <p>🏠 {user?.street} {user?.streetNumber} </p> 
+                  your current address is: 
+                      <p> {user?.street} {user?.streetNumber} </p> 
                   </h2>
 
                 <Link to={`/neighbears/${user?._id}`}><button className='profileButton'>
-       Neighbears</button></Link>
+       Your Neigh 🐻 🐼</button></Link>
        <Link to={`/overview/${user?._id}`}><button className='profileButton'>
-       Overview</button></Link>
+       That's on your agenda ✏️</button></Link>
       
        <Link to={`/event/${user?._id}`}> 
        
-      <button className='profileButton'>create an event</button>
+      <button className='profileButton'>Create an event 🤸‍♂️</button>
       </Link>
 
 
       <Link to={`/addmember/${user?._id}`}><button className='profileButton'>
-       Add Flatmates, partner or Family member</button></Link>
+       Tell me more, tell me more...about you 🎶</button></Link>
        
         </div>
        
@@ -105,7 +105,6 @@ function Profile(props){
 
           </div>
 
-          <h3>People/Animal I live with:</h3>
 {addOneMember.map((member) => {
  console.log('in the map', member)
 return (

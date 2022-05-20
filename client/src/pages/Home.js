@@ -1,5 +1,5 @@
-//import '../Style/Stylesheets/Home.css';
-import logo from '../Style/images/lachende Menschen.jpeg';
+import '../Style/Stylesheets/Home.css';
+import hintergrund from '../Style/images/5722.jpg';
 //import { Link } from "react-router-dom"; 
   
 
@@ -12,10 +12,8 @@ function Home(){
 
         
 <div className="containerHome">
-        <img className= "house" src={logo} alt="house"/>
+        <img className= "house" src={hintergrund} alt="house"/>
         <div className="text-block">
-    <h1>Housemates</h1>
-    <p>get together</p>
   </div>
         </div>
        

@@ -1,4 +1,5 @@
 import profilePic from '../Style/images/ProfilePic.jpeg';
+import '../Style/Stylesheets/Profile.css';
 
 
 function ShowAddMember(props){
@@ -8,9 +9,9 @@ function ShowAddMember(props){
         <div className="cardShowMembers">
 
         <div>
-        <p className="titleShowMembers">I live with: {props.infoOneMember.flatmate}</p>
-       <p className="titleShowMembers"> It is my: {props.infoOneMember.relationship}</p> 
-       <p className="titleShowMembers"> The age is: {props.infoOneMember.age}</p>
+        <p className="titleShowMembers">I live: {props.infoOneMember.flatmate}</p>
+       <p className="titleShowMembers">  {props.infoOneMember.relationship}</p> 
+       <p className="titleShowMembers"> I'm {props.infoOneMember.age} years old</p>
 
        </div>
 

@@ -3,8 +3,8 @@ import React, { useState, useEffect, useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AuthContext } from '../context/auth'
 import profilePic from '../Style/images/ProfilePic.jpeg';
-//import '../Style/Stylesheets/Neighbear.css';
-//import '../Style/Stylesheets/Profile.css';
+import '../Style/Stylesheets/Neighbear.css';
+import '../Style/Stylesheets/Profile.css';
 
 import ShowAddMember from "../components/ShowAddMember"
 
@@ -48,6 +48,7 @@ function OverviewNeighbear() {
      userData.map((neighbear) => {
        console.log('in the map', neighbear)
          return (
+           
 
              <div className = "backgroundForNei">
              <div >

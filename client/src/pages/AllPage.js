@@ -1,5 +1,5 @@
 
-//import '../Style/Stylesheets/Event.css';
+import '../Style/Stylesheets/Event.css';
 
 import axios from 'axios'
 import React, { useState, useEffect} from 'react'
@@ -41,7 +41,7 @@ function AllPage(){
     return(
         <div>
        
-     <h1>   The events are listed here:</h1>
+     <h1>Neigh🐻🐼 Agenda</h1>
 
 
 

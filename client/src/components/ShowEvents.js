@@ -1,4 +1,4 @@
-//import '../Style/Stylesheets/Scrollbar.css';
+import '../Style/Stylesheets/Scrollbar.css';
 import React, { useState, useEffect} from 'react'
 
 
@@ -11,7 +11,7 @@ console.log('propis here', props.eventData)
 
 const selectedFood = () => {
   
- if(props.eventData.eventType === "Food/Drinks 🥨🍸🥦"){
+ if(props.eventData.eventType === "🍕"){
   return  <div className='containerFood scroll floatLeft '><h3>{props.eventData.eventType} </h3><h3> { props.eventData.theme}</h3> <p>{props.eventData.owner.name}</p><p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
       
   }
@@ -19,7 +19,7 @@ const selectedFood = () => {
 
  const selectedParty = () => {
   
-  if(props.eventData.eventType ===  "Party 💄"){
+  if(props.eventData.eventType ===  "🎉"){
    return  <div className='containerParty scroll floatLeft '><h3>{props.eventData.eventType} </h3><h3> { props.eventData.theme}</h3> <p>{props.eventData.owner.name}</p><p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
        
    }
@@ -29,23 +29,23 @@ const selectedFood = () => {
  
 
  const selectedSport = () => {
-  if(props.eventData.eventType === "Sport ⚽️🏈🥎"){
+  if(props.eventData.eventType === "⚽️"){
    return  <div className='containerSport scroll floatRight'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3><p>{props.eventData.owner.name}</p> <p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
        
    }
   }
 
   const selectedMoving = () => {
-    if(props.eventData.eventType === "Moving 😱"){
-     return  <div className='containerMoving scroll floatRight'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3><p>{props.eventData.owner.name}</p> <p>from {props.eventData.eventInfo}</p><p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
+    if(props.eventData.eventType === "🌱"){
+     return  <div className='containerPLants scroll floatRight'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3><p>{props.eventData.owner.name}</p> <p> {props.eventData.eventInfo}</p><p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
          
      }
     }
 
 
  const selectedAnimals = () => {
-  if(props.eventData.eventType === 'Animals/Plants 🐵'){
-   return  <div className='scroll containerAnimals'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3><p>{props.eventData.owner.name}</p> <p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
+  if(props.eventData.eventType === '🐶'){
+   return  <div className='scroll containerAnimals floatRight'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3><p>{props.eventData.owner.name}</p> <p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
        
    }
   }
@@ -54,8 +54,8 @@ const selectedFood = () => {
 
 
 const selectedPost = () => {
-  if(props.eventData.eventType === "Post 📦✉️"){
-   return  <div className='containerPost scroll floatRight'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3> <p>{props.eventData.owner.name}</p><p>from {props.eventData.eventInfo}</p><p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
+  if(props.eventData.eventType === "📬"){
+   return  <div className='containerPost scroll floatRight'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3> <p>{props.eventData.owner.name}</p><p> {props.eventData.eventInfo}</p><p>{props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
        
    }
   }
@@ -63,8 +63,8 @@ const selectedPost = () => {
 
 
 const selectedHelp = () => {
-  if(props.eventData.eventType === 'Help 🚨'){
-   return  <div className='scroll containerHelp'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3> <p>{props.eventData.owner.name}</p><p>from {props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
+  if(props.eventData.eventType === '🆘'){
+   return  <div className='scroll containerHelp'><h3>{props.eventData.eventType} </h3><h3>{props.eventData.theme}</h3> <p>{props.eventData.owner.name}</p><p> {props.eventData.eventInfo}</p> <p>{props.eventData.date}</p></div>
        
    }
   }

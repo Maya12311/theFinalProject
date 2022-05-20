@@ -1,4 +1,4 @@
-//import '../Style/Stylesheets/AddMember.css';
+import '../Style/Stylesheets/AddMember.css';
 import sidePic from '../Style/images/nice-seamless-pattern-vector-21114503.jpeg';
 
 import React, { useState } from 'react';
@@ -43,7 +43,7 @@ function AddMember(){
     return(
         <div className='backgroundColor'>
         <div>
-<h1>Do you have to say something about yourself? </h1>
+<h1> Wanna say something about yourself? </h1>
 <form onSubmit={handleSubmit}>
 
 <div className="containerAddMember">
@@ -54,7 +54,7 @@ function AddMember(){
         className="label1"
         type="text"
         name="flatmate"
-        placeholder="tell your housemates who you live with"
+        placeholder="Floor and door direction"
         value={flatmate}
         onChange={handleFlatmate}
         />
@@ -80,7 +80,7 @@ function AddMember(){
         rows={5}
         cols={80}
        
-        placeholder="If you like, you can tell your Housemates something about the relationship you have to each other or ans information you like to share :)"
+        placeholder="If you like, you can share with your Neighbears infos about yourself :)"
         
         value={relationship}
         onChange={handleRelationship}

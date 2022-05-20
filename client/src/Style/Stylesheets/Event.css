@@ -2,7 +2,7 @@
 
 
 .containerEvent {
-    background-image: linear-gradient(#4DA0B0, #D39D38);
+    background-image: linear-gradient(darkblue, blue, lightblue);
     box-shadow: 10px 10px 10px 10px black;;
     opacity: 0.8;
 
@@ -39,13 +39,12 @@
 
 .body{
   
-    background-image: url('../images/jannes-glas-0NaQQsLWLkA-unsplash.jpg');
+    background-image: url('../images/events.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 1400px;
-  width: 1600px;
-  margin-left: 120px;
+  height: 1200px;
+  width: 1800px;
 }
 
 

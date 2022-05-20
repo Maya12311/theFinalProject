@@ -18,7 +18,6 @@
         width: 100%;
         background-image: linear-gradient(45deg,#ff0000 20%,  #b30000 20%, #ffbfbf 20%, wheat 10%);
         opacity: 60%;
-        background-image: url(../images/wallPic.webp);
         
         
         
@@ -53,8 +52,8 @@
 
     
       .house{
-          width: 90em;
-          height: 100%;
+          width: 70em;
+          height: 62em;
           border-style: solid;
           border-width: 3px;
           border-color: #FFE5CC;
@@ -85,19 +84,21 @@ margin-right: 200px;
       /* Bottom right text */
       .text-block {
         position: absolute;
-        top: 20px;
+        top: 1px;
         left: 20px;
         height: 100px;
-        width: 300px;
+        width: 400px;
         background-color: black;
         color: white;
         padding-left: 20px;
         padding-right: 20px;
         opacity: 70%;
+        background-image: url(../images/logo1.jpg);
+        
+
 
       }
 
       .containerHome{
-        box-shadow: 10px 10px 10px 10px black;;
-
+        width: 1000px;
       }
