@@ -110,6 +110,7 @@ function Profile(props){
 return (
  <div className='card'>
  <ShowAddMember infoOneMember={member}
+ 
  />
 
  </div>

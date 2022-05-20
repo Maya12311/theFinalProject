@@ -17,27 +17,33 @@ function OverviewNeighbear() {
 
   const [userData, setUserData] = useState([]);
   const [flatmate, setFlatmates] = useState([]);
-  //console.log('Im the flatmate from state', flatmate)
+  console.log('Im the flatmate from state', flatmate)
 
-
+console.log('flatmates',flatmate)
   useEffect(() => {                                        // <== ADD THE EFFECT
     axios
       .get(`/api/neighbears/${id}`)
       .then((response) => {
+
         //console.log('I wanna know what the response is about', response)
         //setFlatmates(response.data.flatmates)
        // console.log('I wanna know what the response flatmate is about', response.data.flatmates)
 
         //console.log('frontend here for neighbears', response.data.sameHouse);
         setUserData(response.data.sameHouse)
+        setFlatmates(response.data.infoAboutPerson)
       });
     
   }, [] ); 
 
+
+ 
+
     return(
+      <div className='tryBackground'>
         <div>
        
-       <div>
+       <div className='theHeading'>
         <h1>{user?.name}, these are your Neighbears from </h1>
         <h1>🏡{user?.street} {user?.streetNumber}</h1>
         </div>
@@ -45,6 +51,7 @@ function OverviewNeighbear() {
 
         {
      userData.map((neighbear) => {
+       
          return (
            
 
@@ -95,6 +102,7 @@ function OverviewNeighbear() {
 
         
         <p></p>
+        </div>
         </div>
     )
 }

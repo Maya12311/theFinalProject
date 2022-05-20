@@ -13,6 +13,7 @@
     box-shadow: 5px;
     shape-outside: 5px;
     background-color: coral;
+    border: 3px dotted greenyellow;
 
 }
 
@@ -26,7 +27,6 @@
 
 
 .backgroundForNei{
-    background-color: black;
 }
 
 .imgProfileNei{
@@ -41,4 +41,25 @@
 }
 
 
-   
+.tryBackground{
+    width: 2000px;
+    border: none;
+    background-image: url(../images/plantsBackground.webp);
+}
+
+
+   .theHeading{
+    position: absolute;
+    top: 1px;
+    height: 100px;
+    width: 800px;
+    right: 30px;
+    left: 20px;
+    margin-left: 325px;
+    align-items: center;
+    background-color: #4F7942;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 70%;
+   }
