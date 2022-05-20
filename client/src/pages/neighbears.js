@@ -19,7 +19,6 @@ function OverviewNeighbear() {
   const [flatmate, setFlatmates] = useState([]);
   //console.log('Im the flatmate from state', flatmate)
 
-//console.log(`Da`, userData)
 
   useEffect(() => {                                        // <== ADD THE EFFECT
     axios
@@ -34,19 +33,18 @@ function OverviewNeighbear() {
       });
     
   }, [] ); 
-    
+
     return(
         <div>
        
        <div>
-        <h1>{user?.name}, these are your Housemates from </h1>
+        <h1>{user?.name}, these are your Neighbears from </h1>
         <h1>🏡{user?.street} {user?.streetNumber}</h1>
         </div>
 
 
         {
      userData.map((neighbear) => {
-       console.log('in the map', neighbear)
          return (
            
 
@@ -58,7 +56,7 @@ function OverviewNeighbear() {
              <div className='containerNei container'>
              <div className='box'>
              <div className='imageNeighbears'>
-             <img className='imageNei' src={profilePic}></img>
+             <img className='imgProfileNei' src={neighbear.imageUrl}></img>
              </div>
              </div>
             <div>
@@ -66,11 +64,10 @@ function OverviewNeighbear() {
              <p>Name: {neighbear.name}</p>
              <p>Email address: {neighbear.email}</p>
              </div>
-           
+{/*            
 {
            flatmate.map(function (flatmates)  {
              
-             console.log('show me', flatmates)
               
             flatmates.owner === neighbear._id
             ? <p>I live with: {flatmates.flatmate}</p>
@@ -79,7 +76,7 @@ function OverviewNeighbear() {
              
                })
 
-}
+} */}
              </div>
              </div>
              </div>

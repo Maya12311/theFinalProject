@@ -1,18 +1,14 @@
 
 
 
-.imageNeighbears{
-    border: 3px solid orange;
-    border-radius: 50%;
-    border-style: dotted;
-}
+
 
 .containerNei{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: no wrap;
     padding: 20px;
     box-shadow: 5px;
     shape-outside: 5px;
@@ -27,14 +23,22 @@
 
 }
 
-.imageNei{
-    border-radius: 50%;
-}
+
 
 .backgroundForNei{
     background-color: black;
 }
 
+.imgProfileNei{
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    border: 5px dotted black;
+    border-color: rosybrown;
+    border-radius: 50%;
+    margin-right: 250px;
+    
+}
 
 
    
